@@ -25,7 +25,9 @@ project "msdf-atlas-gen"
 
 	defines
 	{
-		"_CRT_SECURE_NO_WARNINGS"
+		"_CRT_SECURE_NO_WARNINGS",
+		"MSDF_ATLAS_NO_ARTERY_FONT",
+		"MSDF_ATLAS_PUBLIC="
 	}
 
 	links
