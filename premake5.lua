@@ -4,7 +4,7 @@ project "msdf-atlas-gen"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-    staticruntime "off"
+    staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -40,12 +40,14 @@ project "msdf-atlas-gen"
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
+		optimize "off"
 
 	filter "configurations:Release"
 		runtime "Release"
+		symbols "off"
 		optimize "on"
 
 	filter "configurations:Dist"
 		runtime "Release"
+		symbols "off"
 		optimize "on"
-        symbols "off"
